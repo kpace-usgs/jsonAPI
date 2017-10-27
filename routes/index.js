@@ -46,3 +46,21 @@ router.get('/deep_units', (req, res) => {
     });
     request(url + 'deep_units.json').pipe(res);
 });
+
+/* GET shallow aquifer study units */
+router.get('/shallow_units', (req, res) => {
+    res.writeHead(200, {
+        'Content-Type': 'application/json', 
+        'Access-Control-Allow-Origin': '*'
+    });
+    request(url + 'shallow_units.json').pipe(res);
+});
+
+/* GET shallow study areas */
+router.get('/shallow_units', (req, res) => {
+    res.writeHead(200, {
+        'Content-Type': 'application/json', 
+        'Access-Control-Allow-Origin': '*'
+    });
+    request(url + 'shallow_areas.json').pipe(res);
+});
